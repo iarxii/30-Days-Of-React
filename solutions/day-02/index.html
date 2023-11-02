@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>30 Days Of React Challenge</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div id="root"></div>
+
+		<script
+			crossorigin
+			src="https://unpkg.com/react@16/umd/react.development.js"
+		></script>
+		<script
+			crossorigin
+			src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+		></script>
+		<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+		<script type="text/babel">
+			// console log test if React scripts are loaded
+			console.log(React);
+
+			const rootElement = document.querySelector("#root");
+			// const rootElement = document.getElementById('root'); // or this
+
+			// we can reference css styling by assigning them to variables and inject them as onjects within curly braces: style={styleVariable}.
+			// inline styling for components
+			const headingStyles = {
+				color: "white",
+				backgroundColor: "black",
+				fontFamily: "Arial",
+				borderRadius: "25px",
+				padding: "20px",
+			};
+
+			const mainStyles = {
+				backgroundColor: "white",
+				color: "black",
+				fontFamily: "Arial",
+				padding: "20px",
+			};
+
+			const footerStyles = {
+				backgroundColor: "black",
+				color: "white",
+				fontFamily: "Arial",
+				borderRadius: "25px",
+				padding: "20px",
+			};
+
+			// JSX element
+			// const jsxElement = <h1>I am a JSX element</h1>;
+			// inline styling of jsx elements
+			/* const header = (
+				<header style={headingStyles}>
+					<h1>Welcome to 30 Days Of React</h1>
+					<h2>Getting Started React</h2>
+					<h3>JavaScript Library</h3>
+					<p>Thabang Mposula</p>
+					<small>Nov 2, 2023</small>
+				</header>
+			); */
+
+			// main section jsx
+			/* const main = (
+				<main style={mainStyles}>
+					<p>Prerequisite to get started react.js:</p>
+					<ul>
+						<li>HTML</li>
+						<li>CSS</li>
+						<li>JavaScript</li>
+					</ul>
+				</main>
+			); */
+
+			// footer section jsx
+			/* const footer = (
+				<footer style={footerStyles}>
+					<p>Copyright 2023</p>
+				</footer>
+			); */
+
+			// To inject data to a JSX we use the {} bracket.
+			const welcome = "Welcome to 30 Days Of React";
+			const title = "Getting Started React";
+			const subtitle = "JavaScript Library";
+			const author = { firstName: "Thabang", lastName: "Mposula" };
+			const date = "Nov 2, 2023";
+			// array
+			const techs = ["HTML", "CSS", "JavaScript"];
+			// format the list, modify the array before we will inject it to JSX, using map
+			const techsFormatted = techs.map((tech) => <li key={tech}>{tech}</li>);
+
+			// arithmetic operations
+			const numOne = 3;
+			const numTwo = 2;
+
+			const result = (
+				<p>
+					{numOne} + {numTwo} = {numOne + numTwo}
+				</p>
+			);
+
+			// lets calculate my age dynaically
+			const yearBorn = 1995;
+			const currentYear = new Date().getFullYear();
+			const age = currentYear - yearBorn;
+			const personAge = <p>{age}</p>;
+
+			// we can reference css classes using the className attribute in our jsx elements.
+			const header = (
+				<header>
+					<div className="header-wrapper">
+						<h1>{welcome}</h1>
+						<h2>{title}</h2>
+						<h3>{subtitle}</h3>
+						<p>
+							{author.firstName} {author.lastName}
+						</p>
+						<small>Date: {date}</small>
+					</div>
+				</header>
+			);
+
+			const main = (
+				<main>
+					<div className="main-wrapper">
+						<p>
+							Prerequisite to get started{" "}
+							<strong>
+								<em>react.js</em>
+							</strong>
+							:
+						</p>
+						<ul style={{ marginBottom: "10px" }}>
+							{techsFormatted}
+						</ul>
+						arithmetic result: {result}
+						{author.firstName} {author.lastName}'s age: {personAge}
+						
+					</div>
+				</main>
+			);
+
+			const footer = (
+				<footer>
+					<div className="footer-wrapper">
+						<p>Copyright 2023</p>
+					</div>
+				</footer>
+			);
+
+			// JSX element which contain all, it is a container or parent
+			const app = (
+				<div>
+					{header}
+					{main}
+					{footer}
+				</div>
+			);
+
+			// we render the JSX element using the ReactDOM package
+			// ReactDOM has the render method and the render method takes two arguments
+			ReactDOM.render(app, rootElement);
+			// or ReactDOM.render([header, main, footer], rootElement);
+		</script>
+	</body>
+</html>

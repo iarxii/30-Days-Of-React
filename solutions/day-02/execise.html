@@ -1,0 +1,200 @@
+<!-- react boilerplate -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Day 2 - Exercises</title>
+		<meta name="description" content="Day 2 - Exercises" />
+		<link rel="stylesheet" href="style.css" />
+
+		<style>
+			.underline-heading {
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="root"></div>
+
+		<script
+			crossorigin
+			src="https://unpkg.com/react@16/umd/react.development.js"
+		></script>
+		<script
+			crossorigin
+			src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+		></script>
+		<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+		<script type="text/babel">
+			const rootElement = document.querySelector("#root");
+
+			const whatIsReact = (
+				<div>
+					<h2 className="underline-heading">What is React?</h2>
+					<p>
+						What is React?
+						<br />{" "}
+					</p>
+					<p>
+						What is React?
+						<br />{" "}
+					</p>
+					<p>
+						What is a library?
+						<br />{" "}
+					</p>
+					<p>
+						What is a single page application?
+						<br />{" "}
+					</p>
+					<p>
+						What is a component?
+						<br />{" "}
+					</p>
+					<p>
+						What is the latest version of React?
+						<br />{" "}
+					</p>
+					<p>
+						What is DOM?
+						<br />{" "}
+					</p>
+					<p>
+						What is React Virtual DOM?
+						<br />{" "}
+					</p>
+					<p>
+						What does a web application or a website(composed of) have?
+						<br />{" "}
+					</p>
+				</div>
+			);
+
+			const whyReact = (
+				<div>
+					<h2 className="underline-heading">Why React?</h2>
+					<p>
+						Why did you chose to use react?
+						<br />{" "}
+					</p>
+					<p>
+						What measures do you use to know popularity ?<br />{" "}
+					</p>
+					<p>
+						What is more popular, React or Vue ?<br />{" "}
+					</p>
+				</div>
+			);
+
+			const jsx = (
+				<div>
+					<h2 className="underline-heading">JSX</h2>
+					<p>
+						What is an HTML element?
+						<br />{" "}
+					</p>
+					<p>
+						How to write a self closing HTML element?
+						<br />{" "}
+					</p>
+					<p>
+						What is an HTML attribute? Write some of them
+						<br />{" "}
+					</p>
+					<p>
+						What is JSX?
+						<br />{" "}
+					</p>
+					<p>
+						What is babel?
+						<br />{" "}
+					</p>
+					<p>
+						What is a transpiler?
+						<br />{" "}
+					</p>
+				</div>
+			);
+
+			const jsxElements = (
+				<div>
+					<h2 className="underline-heading">JSX Elements</h2>
+					<p>
+						What is a JSX element?
+						<br />{" "}
+					</p>
+					<p>
+						Write your name in a JSX element and store it in a name variable
+						<br />{" "}
+					</p>
+					<p>
+						Write a JSX element which displays your full name, country, title,
+						gender, email, phone number. Use h1 for the name and p for the rest
+						of the information and store it in a user variable
+						<br />{" "}
+					</p>
+					<p>
+						Write a footer JSX element
+						<br />{" "}
+					</p>
+				</div>
+			);
+
+			const inlineStyle = (
+				<div>
+					<h2 className="underline-heading">Inline Style</h2>
+					<p>
+						Create a style object for the main JSX
+						<br />{" "}
+					</p>
+					<p>
+						Create a style object for the footer and app JSX
+						<br />{" "}
+					</p>
+					<p>
+						Add more styles to the JSX elements
+						<br />{" "}
+					</p>
+				</div>
+			);
+
+			const internalStyle = (
+				<div>
+					<h2 className="underline-heading">Internal Style</h2>
+					<p>
+						Apply different styles to your JSX elements
+						<br />{" "}
+					</p>
+				</div>
+			);
+
+			const injectDataToJSX = (
+				<div>
+					<h2 className="underline-heading">Inject data to JSX</h2>
+					<p>
+						Practice how to make JSX element and injecting dynamic data(string,
+						number, boolean, array, object)
+						<br />{" "}
+					</p>
+				</div>
+			);
+
+			const app = (
+				<div>
+					{whatIsReact}
+					{whyReact}
+					{jsx}
+					{jsxElements}
+					{inlineStyle}
+					{internalStyle}
+                    {injectDataToJSX}
+				</div>
+			);
+
+			// render
+			ReactDOM.render(app, rootElement);
+		</script>
+	</body>
+</html>
